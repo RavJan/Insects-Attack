@@ -4,8 +4,14 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     classes/Media/image.cpp \
-    classes/Media/file.cpp
+    classes/Media/file.cpp \
+    classes/game.cpp \
+    classes/test.cpp \
+    classes/resourcemanager.cpp
 
 HEADERS += \
     classes/Media/image.h \
-    classes/Media/file.h
+    classes/Media/file.h \
+    classes/game.h \
+    classes/test.h \
+    classes/resourcemanager.h
