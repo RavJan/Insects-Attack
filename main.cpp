@@ -8,6 +8,8 @@ int main()
 {
     Game game;
 
+    game.readConfiguration();
+
     int user_desition = game.showMainMenu();
 
     if (user_desition == GAME_START) {

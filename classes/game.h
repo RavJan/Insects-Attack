@@ -6,6 +6,10 @@ enum USER_DESITION {
     GAME_START
 };
 
+/**
+  * Manages game
+  * @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
+  */
 class Game
 {
 public:
@@ -17,6 +21,11 @@ public:
     void run();
 
     /**
+      * Reads configuration file
+      */
+    void readConfiguration();
+
+    /**
       * Connects to host set in parameter
       * @param host
       * @return bool true if connection has been estalibshed, otherwise return false
@@ -24,7 +33,7 @@ public:
     bool connect(char *host);
 
     /**
-      * Sends ping to IP addres and returns response time
+      * Sends ping to IP address and returns response's time
       * @return int time spent waiting for response from IP
       */
     int ping(char *ip);
