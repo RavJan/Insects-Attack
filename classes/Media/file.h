@@ -20,8 +20,21 @@ namespace Media {
          */
         bool isExists();
 
+        /**
+          * Read file from a disk
+          * @return a pointer to a loaded  file into memory
+          */
+        char* read();
+
+        /**
+          * Write file on a disk
+          * @return bool true if wrote correctly or return false if any error occure
+          */
+        bool write();
+
     protected:
         std::string Filename;
+        char* Data;
     };
 }
 
