@@ -5,36 +5,28 @@
 #include <fstream>
 
 namespace Media {
+   /**
+    * The base class for classes that operate on files
+    * @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
+    */
     class File
     {
     public:
         /**
          * Default constructor
-         * @param string filename name of file to load
+         * @param filename name of file to load
          */
         File(std::string filename);
 
         /**
          * Chceck if file exists
-         * @return bool true if file exists, otherwise returns false
+         * @return true if file exists, otherwise returns false
          */
         bool isExists();
 
-        /**
-          * Read file from a disk
-          * @return a pointer to a loaded  file into memory
-          */
-        char* read();
-
-        /**
-          * Write file on a disk
-          * @return bool true if wrote correctly or return false if any error occure
-          */
-        bool write();
-
     protected:
+        /// name of the file
         std::string Filename;
-        char* Data;
     };
 }
 

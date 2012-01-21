@@ -3,18 +3,25 @@
 
 using namespace std;
 
-// comment
 int main()
 {
-    Game game;
+    Game *game;
 
-    game.readConfiguration();
+    try {
+        game = new Game("configuration.txt");
+    } catch (const char* msg) {
+        cout << "Error: " << msg << endl;
+        return 1;
+    }
 
-    int user_desition = game.showMainMenu();
+
+    int user_desition = game->showMainMenu();
 
     if (user_desition == GAME_START) {
-        game.run();
+        game->run();
     }
+
+    delete game;
 
     return 0;
 }

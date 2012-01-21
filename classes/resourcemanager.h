@@ -1,24 +1,28 @@
 #ifndef RESOURCEMANAGER_H
 #define RESOURCEMANAGER_H
 
-//#include<SDL/SDL.h>
+#include<SDL/SDL.h>
 
+/**
+  * Recourses manager
+  * @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
+  */
 class ResourceManager
 {
 public:
     ResourceManager();
 
-//    /**
-//      * Loads image and returns pointer to it
-//      * @return SDL_Surface*
-//      */
-//    SDL_Surface * loadImage(char *filename);
+    /**
+      * Loads image and returns pointer to it
+      * @return pointer to loaded image
+      */
+    SDL_Surface * loadImage(char *filename);
 
-//    /**
-//      * Returns true if image has been already loaded, otherwise returns false
-//      * @return bool
-//      */
-//    bool imageLoaded(char *filename);
+    /**
+      * Returns information if image was loaded
+      * @return true if image has been already loaded correctly, otherwise returns false
+      */
+    bool imageLoaded(char *filename);
 };
 
 #endif // RESOURCEMANAGER_H

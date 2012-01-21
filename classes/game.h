@@ -1,6 +1,12 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <map>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include "Config.h"
+
 enum USER_DESITION {
     GAME_EXIT,
     GAME_START
@@ -13,7 +19,16 @@ enum USER_DESITION {
 class Game
 {
 public:
-    Game();
+
+    /**
+      * Constructor for the game
+      */
+    Game(std::string configurationFile);
+
+    /**
+      * Destructor
+      */
+    ~Game();
 
     /**
       * Runs the game
@@ -21,14 +36,22 @@ public:
     void run();
 
     /**
-      * Reads configuration file
+      * Returns value of key configuration
+      * @param key key of configuration
       */
-    void readConfiguration();
+    std::string getConfig(std::string key);
+
+    /**
+      * Sets new/edit existing entry in configuration
+      * @param key
+      * @param value
+      */
+    void setConfig(std::string key, std::string value);
 
     /**
       * Connects to host set in parameter
       * @param host
-      * @return bool true if connection has been estalibshed, otherwise return false
+      * @return true if connection has been estalibshed, otherwise return false
       */
     bool connect(char *host);
 
@@ -40,9 +63,13 @@ public:
 
     /**
       * Shows main menu and returns user desition as integer
-      * @return USER_DESITION user's desition
+      * @return user's desition (USER_DESITION)
       */
     int showMainMenu();
+
+protected:
+    /// Configuration of the game
+    Config * Configuration;
 };
 
 #endif // GAME_H
