@@ -3,6 +3,7 @@
 
 #include <string>
 #include <fstream>
+#include <iostream>
 
 namespace Media {
     class File
@@ -12,7 +13,7 @@ namespace Media {
          * Default constructor
          * @param string filename name of file to load
          */
-        File(std::string filename);
+        File(std::string  filename);
 
         /**
          * Chceck if file exists
@@ -28,13 +29,13 @@ namespace Media {
 
         /**
           * Write file on a disk
+          * @param pointer ot type *char pointed data which should be saved on a disk
           * @return bool true if wrote correctly or return false if any error occure
           */
-        bool write();
+        bool write(std::string filename, char* data, int length);
 
     protected:
         std::string Filename;
-        char* Data;
     };
 }
 
