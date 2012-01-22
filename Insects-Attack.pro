@@ -10,7 +10,8 @@ SOURCES += main.cpp \
     classes/game.cpp \
     classes/test.cpp \
     classes/resourcemanager.cpp \
-    classes/Config.cpp
+    classes/Config.cpp \
+    classes/Obiects/Object.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -18,4 +19,5 @@ HEADERS += \
     classes/game.h \
     classes/test.h \
     classes/resourcemanager.h \
-    classes/Config.h
+    classes/Config.h \
+    classes/Obiects/Object.h
