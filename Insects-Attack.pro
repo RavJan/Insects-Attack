@@ -2,6 +2,8 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= qt
 
+LIBS += -lSDL -lSDL_image
+
 SOURCES += main.cpp \
     classes/Media/image.cpp \
     classes/Media/file.cpp \

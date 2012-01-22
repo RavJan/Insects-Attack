@@ -1,11 +1,15 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <SDL/SDL.h>
+#include <SDL/SDL_gfxPrimitives.h>
 #include <map>
 #include <string>
 #include <fstream>
 #include <iostream>
 #include "Config.h"
+
+#include <iostream>
 
 enum USER_DESITION {
     GAME_EXIT,
@@ -67,9 +71,59 @@ public:
       */
     int showMainMenu();
 
+    /**
+      * Sets new width of the screen
+      * @param width new width
+      */
+    void setScreenWidth(unsigned int width);
+
+    /**
+      * Returns current width of the screen
+      */
+    unsigned int getScreenWidth();
+
+    /**
+      * Sets new height of the screen
+      * @param height new height
+      */
+    void setScreenHeight(unsigned int height);
+
+    /**
+      * Returns current height of the screen
+      */
+    unsigned int getScreenHeight();
+
+    /**
+      * If set true, game will be displayed in fullscreen mode
+      * @param fullScreen
+      */
+    void setFullScreen(bool fullScreen = true);
+
+    /**
+      * If return true, game is displayed in fullscreen mode
+      */
+    bool getFullScreen();
+
 protected:
     /// Configuration of the game
     Config * Configuration;
+
+    /**
+      * Width of the screen
+      */
+    unsigned int ScreenWidth;
+
+    /**
+      * Height of the screen
+      */
+    unsigned int ScreenHeight;
+
+    /**
+      * If false game will be displayed in a window mode
+      */
+    bool FullScreen;
+
+    SDL_Surface* Screen;
 };
 
 #endif // GAME_H
