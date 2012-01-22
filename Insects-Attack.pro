@@ -11,7 +11,12 @@ SOURCES += main.cpp \
     classes/test.cpp \
     classes/resourcemanager.cpp \
     classes/Config.cpp \
-    classes/Obiects/Object.cpp
+    classes/Obiects/Object.cpp \
+    classes/Obiects/Movalbe.cpp \
+    classes/Obiects/Static.cpp \
+    classes/Obiects/Destroyable.cpp \
+    classes/Obiects/Upgradable.cpp \
+    classes/Point.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -20,4 +25,9 @@ HEADERS += \
     classes/test.h \
     classes/resourcemanager.h \
     classes/Config.h \
-    classes/Obiects/Object.h
+    classes/Obiects/Object.h \
+    classes/Obiects/Movalbe.h \
+    classes/Obiects/Static.h \
+    classes/Obiects/Destroyable.h \
+    classes/Obiects/Upgradable.h \
+    classes/Point.h

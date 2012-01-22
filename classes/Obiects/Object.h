@@ -2,6 +2,7 @@
 #define OBJECT_H
 
 #include <SDL/SDL.h>
+#include "../Point.h"
 
 namespace Objects {
 
@@ -19,23 +20,20 @@ namespace Objects {
 
         void setX(unsigned int x);
         void setY(unsigned int y);
+        void setPosition(unsigned int x, unsigned int y);
+        void setPosition(Point p);
         void setWidth(unsigned int width);
         void setHeight(unsigned int height);
 
         /**
           * Virtual method for printing object on the screen
           */
-        virtual void print(SDL_Surface *screen);
+        virtual void print(SDL_Surface *screen) = 0;
     protected:
         /**
           * Position of the object on the screen
           */
-        unsigned int X;
-
-        /**
-          * Position of the object on the screen
-          */
-        unsigned int Y;
+        Point Position;
 
         /**
           * Width of the object on the screen

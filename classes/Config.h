@@ -35,6 +35,10 @@ public:
       */
     void set(std::string key, std::string value);
 
+    /**
+      * Saves configuration to file
+      * @return true if saved correctly, otherwise returns false
+      */
     bool save();
 
 protected:
