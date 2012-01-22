@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <vector>
 
 namespace Media {
    /**
@@ -25,13 +26,11 @@ namespace Media {
          */
         bool isExists();
 
-<<<<<<< HEAD
-=======
         /**
           * Read file from a disk
-          * @return a pointer to a loaded  file into memory
+          * @return bool value, true if fatch file to data vector
           */
-        char* read();
+        char*read();
 
         /**
           * Write file on a disk
@@ -40,7 +39,6 @@ namespace Media {
           */
         bool write(std::string filename, char* data, int length);
 
->>>>>>> 244e98942cf7db64c9d187e5d86c9b07d58c6203
     protected:
         /// name of the file
         std::string Filename;
