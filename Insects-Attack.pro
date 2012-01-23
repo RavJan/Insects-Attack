@@ -16,7 +16,9 @@ SOURCES += main.cpp \
     classes/Obiects/Static.cpp \
     classes/Obiects/Destroyable.cpp \
     classes/Obiects/Upgradable.cpp \
-    classes/Point.cpp
+    classes/Point.cpp \
+    classes/Obiects/Unit.cpp \
+    classes/Obiects/Building.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -30,4 +32,6 @@ HEADERS += \
     classes/Obiects/Static.h \
     classes/Obiects/Destroyable.h \
     classes/Obiects/Upgradable.h \
-    classes/Point.h
+    classes/Point.h \
+    classes/Obiects/Unit.h \
+    classes/Obiects/Building.h
