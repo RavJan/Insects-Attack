@@ -19,7 +19,8 @@ SOURCES += main.cpp \
     classes/Point.cpp \
     classes/Obiects/Unit.cpp \
     classes/Obiects/Building.cpp \
-    classes/Obiects/Water.cpp
+    classes/Obiects/Water.cpp \
+    classes/Logger.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -36,4 +37,5 @@ HEADERS += \
     classes/Point.h \
     classes/Obiects/Unit.h \
     classes/Obiects/Building.h \
-    classes/Obiects/Water.h
+    classes/Obiects/Water.h \
+    classes/Logger.h

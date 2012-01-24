@@ -6,6 +6,7 @@
 #include <map>
 #include <string>
 #include <iostream>
+#include "Logger.h"
 
 /**
   * Recourses manager
@@ -14,8 +15,6 @@
 class ResourceManager
 {
 public:
-    ResourceManager();
-
     /**
       * Loads image and returns pointer to it
       * @return pointer to loaded image
