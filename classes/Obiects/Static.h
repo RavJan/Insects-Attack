@@ -9,7 +9,7 @@ namespace Objects {
       * Base class for all static (not movable) objects etc buildings, rocks, wather
       * @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
       */
-    class Static
+    class Static : public Object
     {
     public:
     };

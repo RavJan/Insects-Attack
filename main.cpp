@@ -1,6 +1,10 @@
 #include <iostream>
 #include "classes/game.h"
 
+#include "classes/Obiects/Object.h"
+
+ResourceManager Objects::Object::ResManager;
+
 using namespace std;
 
 int main()

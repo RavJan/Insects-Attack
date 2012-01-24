@@ -53,3 +53,8 @@ void Objects::Object::setWidth(unsigned int width)
         this->Width = width;
     }
 }
+
+std::string Objects::Object::getName()
+{
+    return this->Name;
+}

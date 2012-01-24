@@ -18,7 +18,8 @@ SOURCES += main.cpp \
     classes/Obiects/Upgradable.cpp \
     classes/Point.cpp \
     classes/Obiects/Unit.cpp \
-    classes/Obiects/Building.cpp
+    classes/Obiects/Building.cpp \
+    classes/Obiects/Water.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -34,4 +35,5 @@ HEADERS += \
     classes/Obiects/Upgradable.h \
     classes/Point.h \
     classes/Obiects/Unit.h \
-    classes/Obiects/Building.h
+    classes/Obiects/Building.h \
+    classes/Obiects/Water.h

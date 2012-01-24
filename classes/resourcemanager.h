@@ -5,6 +5,7 @@
 #include <SDL/SDL_image.h>
 #include <map>
 #include <string>
+#include <iostream>
 
 /**
   * Recourses manager

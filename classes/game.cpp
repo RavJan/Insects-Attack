@@ -55,12 +55,18 @@ void Game::run()
 
     SDL_FillRect(this->Screen, &rect, BgColor);
 
+    Objects::Water w(100, 100);
+
+    w.print(this->Screen);
+
     SDL_Flip(this->Screen);
 
     for(;;) {
         if(SDL_PollEvent(&event)) {
             if(event.type==SDL_QUIT || event.type==SDL_KEYDOWN) return;
         }
+
+        w.print(this->Screen);
 
         /* oddaj czas procesora dla innych aplikacji */
         SDL_Delay(100);
