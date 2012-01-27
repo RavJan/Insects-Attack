@@ -8,6 +8,8 @@ Game::Game(std::string configurationFile)
 
     this->Configuration = new Config(configurationFile);
     this->Configuration->readConfig();
+
+    Logger::log("Configuration has been read");
 }
 
 Game::~Game()

@@ -18,10 +18,10 @@ public:
     static void log(T msg, LOG_TYPE type = TYPE_INFO) {
         switch(type) {
         case TYPE_INFO:
-            cout<<"Info: "<< msg << endl;
+            cout<<"\x1b[32m"<<"Info: "<< msg <<"\x1b[0m" << endl;
             break;
         case TYPE_ERROR:
-            cout<<"ERROR: "<< msg << endl;
+            cout<<"\x1b[31m"<<"ERROR: "<< msg <<"\x1b[0m" << endl;
             break;
         }
     }
