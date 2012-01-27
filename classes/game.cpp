@@ -2,6 +2,10 @@
 
 Game::Game(std::string configurationFile)
 {
+    if (!Media::File::fileExists(configurationFile)) {
+        Media::File::createEmptyFile(configurationFile);
+    }
+
     this->Configuration = new Config(configurationFile);
     this->Configuration->readConfig();
 }

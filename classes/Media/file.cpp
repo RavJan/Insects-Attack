@@ -7,8 +7,13 @@ Media::File::File(std::string filename)
 
 bool Media::File::isExists()
 {
+    return fileExists(this->Filename);
+}
+
+bool Media::File::fileExists(std::string  filename)
+{
     std::fstream fin;
-    fin.open(this->Filename.c_str(), std::ios::in);
+    fin.open(filename.c_str(), std::ios::in);
 
     if( fin.is_open() )
     {
@@ -18,4 +23,12 @@ bool Media::File::isExists()
 
     fin.close();
     return false;
+}
+
+void Media::File::createEmptyFile(std::string filename)
+{
+    std::ofstream file;
+    file.open(filename.c_str());
+    file <<std::endl;
+    file.close();
 }
