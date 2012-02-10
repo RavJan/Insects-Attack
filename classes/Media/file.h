@@ -25,6 +25,7 @@ namespace Media {
          * @return true if file exists, otherwise returns false
          */
         bool isExists();
+//<<<<<<< HEAD
 
         /**
           * Read file from a disk
@@ -39,6 +40,8 @@ namespace Media {
           */
         bool write(std::string filename, char* data, int length);
 
+//=======
+//>>>>>>> e4ccf556a82676069523f48450787f787df3342a
     protected:
         /// name of the file
         std::string Filename;

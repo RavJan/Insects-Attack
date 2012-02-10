@@ -19,6 +19,7 @@ bool Media::File::isExists()
     fin.close();
     return false;
 }
+//<<<<<<< HEAD
 
 char* Media::File::read()
 {
@@ -82,3 +83,5 @@ bool Media::File::write(std::string filename, char *data, int length)
     fout.close();
     return true;
 }
+//=======
+//>>>>>>> e4ccf556a82676069523f48450787f787df3342a

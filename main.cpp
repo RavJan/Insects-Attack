@@ -14,7 +14,6 @@ int main()
         return 1;
     }
 
-
     int user_desition = game->showMainMenu();
 
     if (user_desition == GAME_START) {
