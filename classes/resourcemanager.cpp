@@ -1,9 +1,5 @@
 #include "resourcemanager.h"
 
-ResourceManager::ResourceManager()
-{
-}
-
 SDL_Surface * ResourceManager::loadImage(std::string filename)
 {
     if (this->imageLoaded(filename)) {
@@ -11,6 +7,10 @@ SDL_Surface * ResourceManager::loadImage(std::string filename)
     }
 
     this->Images[filename.c_str()] = IMG_Load(filename.c_str());
+
+    if (!this->Images[filename.c_str()]) {
+        Logger::log("File does not exists: ", TYPE_ERROR);
+    }
 
     return this->Images[filename.c_str()];
 }

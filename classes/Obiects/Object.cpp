@@ -2,12 +2,12 @@
 
 unsigned int Objects::Object::getX()
 {
-    return this->X;
+    return this->Position.getX();
 }
 
 unsigned int Objects::Object::getY()
 {
-    return this->Y;
+    return this->Position.getY();
 }
 
 unsigned int Objects::Object::getWidth()
@@ -22,16 +22,22 @@ unsigned int Objects::Object::getHeight()
 
 void Objects::Object::setX(unsigned int x)
 {
-    if (x > 0) {
-        this->X = x;
-    }
+    this->Position.setX(x);
 }
 
 void Objects::Object::setY(unsigned int y)
 {
-    if (y > 0) {
-        this->Width = y;
-    }
+    this->Position.setY(y);
+}
+
+void Objects::Object::setPosition(unsigned int x, unsigned int y)
+{
+    this->setPosition(Point(x, y));
+}
+
+void Objects::Object::setPosition(Point p)
+{
+    this->Position = p;
 }
 
 void Objects::Object::setHeight(unsigned int height)
@@ -46,4 +52,9 @@ void Objects::Object::setWidth(unsigned int width)
     if (width > 0) {
         this->Width = width;
     }
+}
+
+std::string Objects::Object::getName()
+{
+    return this->Name;
 }
