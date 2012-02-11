@@ -19,6 +19,7 @@ Objects::Water::Water(Point p)
 void Objects::Water::loadTextures()
 {
     std::string water1 = "media/textures/objects/water/water1.png";
+
     this->Textures[water1] = this->ResManager.loadImage(water1);
 }
 

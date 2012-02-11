@@ -6,7 +6,7 @@ SDL_Surface * ResourceManager::loadImage(std::string filename)
         return this->Images[filename.c_str()];
     }
 
-    this->Images[filename.c_str()] = IMG_Load(filename.c_str());
+    this->Images[filename.c_str()] =  IMG_Load(filename.c_str());
 
     if (!this->Images[filename.c_str()]) {
         Logger::log("File does not exists: ", TYPE_ERROR);

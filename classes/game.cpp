@@ -45,7 +45,6 @@ void Game::run()
     atexit(SDL_Quit);
 
     this->Screen = SDL_SetVideoMode(this->getScreenWidth(), this->getScreenHeight(), 32, SDL_ANYFORMAT);
-
     if(!(this->Screen)) {
         throw "Cannot init video";
     }
