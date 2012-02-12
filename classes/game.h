@@ -7,6 +7,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include<stdlib.h>
 #include "Config.h"
 #include "Obiects/Water.h"
 
@@ -125,6 +126,11 @@ protected:
     bool FullScreen;
 
     SDL_Surface* Screen;
+
+    /**
+      * Protected method, it setup all configuration variables
+      */
+    void setupConfing();
 };
 
 #endif // GAME_H

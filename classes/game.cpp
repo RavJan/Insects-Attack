@@ -10,6 +10,8 @@ Game::Game(std::string configurationFile)
     this->Configuration->readConfig();
 
     Logger::log("Configuration has been read");
+
+    this->setupConfing();
 }
 
 Game::~Game()
@@ -75,6 +77,21 @@ void Game::run()
 
         /* oddaj czas procesora dla innych aplikacji */
         SDL_Delay(100);
+    }
+}
+
+void Game::setupConfing()
+{
+    //set screen
+    if(this->Configuration->ifKeyExists("ScreenWidth") ||  this->Configuration->ifKeyExists("ScreenHeight"))
+    {
+        this->setScreenWidth(atoi(this->Configuration->get("ScreenWidth").c_str()));
+        this->setScreenHeight(atoi(this->Configuration->get("ScreenHeight").c_str()));
+    }
+    else
+    {
+        this->setScreenHeight(600);
+        this->setScreenWidth(800);
     }
 }
 

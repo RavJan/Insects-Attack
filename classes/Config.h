@@ -36,6 +36,13 @@ public:
     void set(std::string key, std::string value);
 
     /**
+      * Check if key in a configuration structur already exists
+      * @param key
+      * @return true if it does, otherwise return false
+      */
+    bool ifKeyExists(std::string key);
+
+    /**
       * Saves configuration to file
       * @return true if saved correctly, otherwise returns false
       */

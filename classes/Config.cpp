@@ -46,6 +46,11 @@ void Config::set(std::string key, std::string value)
     Configuration[key] = value;
 }
 
+bool Config::ifKeyExists(std::string key)
+{
+    return Configuration.count(key.c_str()) > 0 ? true : false;
+}
+
 bool Config::save()
 {
     std::fstream config;
