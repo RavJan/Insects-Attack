@@ -40,4 +40,5 @@ HEADERS += \
     classes/Obiects/Water.h \
     classes/Logger.h \
     classes/Obiects/Movable.h \
-    classes/Nations/Nation.h
+    classes/Nations/Nation.h \
+    classes/Obiects/Movable.h
