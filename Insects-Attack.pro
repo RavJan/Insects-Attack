@@ -12,7 +12,6 @@ SOURCES += main.cpp \
     classes/resourcemanager.cpp \
     classes/Config.cpp \
     classes/Obiects/Object.cpp \
-    classes/Obiects/Movalbe.cpp \
     classes/Obiects/Static.cpp \
     classes/Obiects/Destroyable.cpp \
     classes/Obiects/Upgradable.cpp \
@@ -20,7 +19,9 @@ SOURCES += main.cpp \
     classes/Obiects/Unit.cpp \
     classes/Obiects/Building.cpp \
     classes/Obiects/Water.cpp \
-    classes/Logger.cpp
+    classes/Logger.cpp \
+    classes/Obiects/Movable.cpp \
+    classes/Nations/Nation.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -30,7 +31,6 @@ HEADERS += \
     classes/resourcemanager.h \
     classes/Config.h \
     classes/Obiects/Object.h \
-    classes/Obiects/Movalbe.h \
     classes/Obiects/Static.h \
     classes/Obiects/Destroyable.h \
     classes/Obiects/Upgradable.h \
@@ -38,4 +38,6 @@ HEADERS += \
     classes/Obiects/Unit.h \
     classes/Obiects/Building.h \
     classes/Obiects/Water.h \
-    classes/Logger.h
+    classes/Logger.h \
+    classes/Obiects/Movable.h \
+    classes/Nations/Nation.h
