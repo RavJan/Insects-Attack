@@ -2,7 +2,8 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= qt
 
-LIBS += -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_gfx
+LIBS +=  -lSDLmain -lSDL -lSDL_image -lSDL_gfx
+win32:LIBS += -lmingw32
 
 SOURCES += main.cpp \
     classes/Media/image.cpp \
