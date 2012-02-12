@@ -20,8 +20,8 @@ SOURCES += main.cpp \
     classes/Obiects/Building.cpp \
     classes/Obiects/Water.cpp \
     classes/Logger.cpp \
-    classes/Obiects/Movable.cpp \
-    classes/Nations/Nation.cpp
+    classes/Nations/Nation.cpp \
+    classes/Obiects/Movalbe.cpp
 
 HEADERS += \
     classes/Media/image.h \
@@ -39,6 +39,5 @@ HEADERS += \
     classes/Obiects/Building.h \
     classes/Obiects/Water.h \
     classes/Logger.h \
-    classes/Obiects/Movable.h \
     classes/Nations/Nation.h \
-    classes/Obiects/Movable.h
+    classes/Obiects/Movalbe.h

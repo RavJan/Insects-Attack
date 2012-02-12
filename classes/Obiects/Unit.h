@@ -2,7 +2,7 @@
 #define UNIT_H
 
 #include "Upgradable.h"
-#include "Movable.h"
+#include "Movalbe.h"
 
 namespace Objects {
 
@@ -11,7 +11,7 @@ namespace Objects {
       * @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
       */
 
-    class Unit: public Upgradable, public Movable
+    class Unit: public Upgradable, public Movalbe
     {
     public:
         Unit();

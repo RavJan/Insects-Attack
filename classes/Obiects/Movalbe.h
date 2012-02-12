@@ -9,15 +9,15 @@ using std::queue;
 
 namespace Objects {
     /**
-* Base class for all units etc
-* @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
-*/
+    * Base class for all units etc
+    * @author Bartłomiej Kiełbasa <kontakt@bkielbasa.pl>
+    */
     class Movalbe
     {
     public:
         /**
-* Move element from current position to destination
-*/
+        * Move element from current position to destination
+        */
         virtual void move(unsigned int x, unsigned int y) = 0;
         virtual void move(Point p) = 0;
 
@@ -25,8 +25,8 @@ namespace Objects {
         Point Destination;
 
         /**
-* If the object is moving, this queue stores the points that you want to go
-*/
+        * If the object is moving, this queue stores the points that you want to go
+        */
         queue<Point> Path;
     };
 }
