@@ -2,8 +2,14 @@
 
 Game::Game(std::string configurationFile)
 {
+    if (!Media::File::fileExists(configurationFile)) {
+        Media::File::createEmptyFile(configurationFile);
+    }
+
     this->Configuration = new Config(configurationFile);
     this->Configuration->readConfig();
+
+    Logger::log("Configuration has been read");
 }
 
 Game::~Game()
@@ -38,8 +44,7 @@ void Game::run()
 
     atexit(SDL_Quit);
 
-    this->Screen = SDL_SetVideoMode(this->getScreenWidth(), this->getScreenHeight(), 0, SDL_ANYFORMAT);
-
+    this->Screen = SDL_SetVideoMode(this->getScreenWidth(), this->getScreenHeight(), 32, SDL_ANYFORMAT);
     if(!(this->Screen)) {
         throw "Cannot init video";
     }
