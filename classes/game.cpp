@@ -82,7 +82,7 @@ void Game::run()
 
 void Game::setupConfing()
 {
-    //set screen
+    //Set screen
     if(this->Configuration->ifKeyExists("ScreenWidth") ||  this->Configuration->ifKeyExists("ScreenHeight"))
     {
         this->setScreenWidth(atoi(this->Configuration->get("ScreenWidth").c_str()));
