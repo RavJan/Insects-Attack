@@ -1,0 +1,3 @@
+[submodule "classes/GUI"]
+	path = classes/GUI
+	url = git@github.com:bkielbasa/iaGUI.git
